@@ -1,6 +1,6 @@
-﻿namespace DynamicComponents;
+﻿namespace DynamicComponents.Forms;
 
-partial class Form1
+partial class MainForm
 {
     /// <summary>
     ///  Required designer variable.
@@ -28,11 +28,31 @@ partial class Form1
     /// </summary>
     private void InitializeComponent()
     {
-        this.components = new System.ComponentModel.Container();
-        this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        this.ClientSize = new System.Drawing.Size(800, 450);
-        this.Text = "Form1";
+        mainButton = new Button();
+        SuspendLayout();
+        // 
+        // mainButton
+        // 
+        mainButton.Location = new Point(12, 12);
+        mainButton.Name = "mainButton";
+        mainButton.Size = new Size(261, 54);
+        mainButton.TabIndex = 0;
+        mainButton.Text = "Click me";
+        mainButton.UseVisualStyleBackColor = true;
+        mainButton.Click += mainButton_Click;
+        // 
+        // MainForm
+        // 
+        AutoScaleDimensions = new SizeF(8F, 20F);
+        AutoScaleMode = AutoScaleMode.Font;
+        ClientSize = new Size(285, 345);
+        Controls.Add(mainButton);
+        Name = "MainForm";
+        Text = "Main";
+        ResumeLayout(false);
     }
 
     #endregion
+
+    private Button mainButton;
 }
