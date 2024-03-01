@@ -28,31 +28,18 @@ partial class MainForm
     /// </summary>
     private void InitializeComponent()
     {
-        mainButton = new Button();
         SuspendLayout();
-        // 
-        // mainButton
-        // 
-        mainButton.Location = new Point(12, 12);
-        mainButton.Name = "mainButton";
-        mainButton.Size = new Size(261, 54);
-        mainButton.TabIndex = 0;
-        mainButton.Text = "Click me";
-        mainButton.UseVisualStyleBackColor = true;
-        mainButton.Click += mainButton_Click;
         // 
         // MainForm
         // 
         AutoScaleDimensions = new SizeF(8F, 20F);
         AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(285, 345);
-        Controls.Add(mainButton);
+        ClientSize = new Size(412, 345);
         Name = "MainForm";
         Text = "Main";
+        Load += MainForm_Load;
         ResumeLayout(false);
     }
 
     #endregion
-
-    private Button mainButton;
 }
